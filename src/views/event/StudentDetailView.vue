@@ -1,19 +1,16 @@
 <script setup lang="ts">
 import type { Information } from '@/info';
-import InformationService from '@/services/InformationService';
-import { ref } from 'vue';
+import { type PropType } from 'vue';
 
-
-const student = ref<Information | null> (null)
-const props = defineProps({
-    id: String
-})
-InformationService.getStudentById(Number(props.id))
-.then((response) => {
-    student.value = response.data
-})
-.catch((error) => {
-    console.log(error)
+defineProps({
+    student: {
+        type: Object as PropType<Information>,
+        require: true
+    },
+    advisor: {
+        type: Object as PropType<Information>,
+        require: true
+    }
 })
 </script>
 <template>
@@ -24,7 +21,7 @@ InformationService.getStudentById(Number(props.id))
    <div class="student-info">
     <span> {{ student.studentID }}</span>
    <p>{{ student.name }}  {{ student.surname }}</p>
-   <p>{{ student.teacher }}</p>
+   <p>{{ advisor?.name }}  {{ advisor?.surname }}</p>
    </div>
   
 </div>
