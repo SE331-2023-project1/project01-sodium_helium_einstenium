@@ -20,8 +20,8 @@ defineProps({
     </div>
    <div class="student-info">
     <span> {{ student.studentID }}</span>
-   <p>{{ student.name }}  {{ student.surname }}</p>
-   <p>{{ advisor?.name }}  {{ advisor?.surname }}</p>
+    <p>{{ student.name }}  {{ student.surname }}</p>
+   <RouterLink :to="{ name: 'advisor-detail', params:{ id: advisor?.id } }">{{ advisor?.name }}  {{ advisor?.surname }}</RouterLink>
    </div>
   
 </div>
@@ -36,5 +36,4 @@ defineProps({
    flex-direction: column;
    align-items: center;
 }
-
 </style>

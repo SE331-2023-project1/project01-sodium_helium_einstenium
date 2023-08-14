@@ -7,6 +7,9 @@ import { useInformationStore } from '@/stores/informantion'
 import InformationService from '@/services/InformationService'
 import StudentAddView from '@/views/event/StudentAddView.vue'
 import StudentCommentView from '@/views/event/StudentCommentView.vue'
+import AdvisorLayoutView from '@/views/event/AdvisorLayoutView.vue'
+import AdvisorDetail from '@/views/event/AdvisorDetail.vue'
+import AdvisorAddData from '@/views/event/AdvisorAddData.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -55,6 +58,33 @@ const router = createRouter({
           path: '/student/:id/comment',
           name: 'student-comment',
           component: StudentCommentView
+        }
+      ]
+    },
+    {
+      path: '/advisor/:id',
+      name: 'advisor-layout',
+      component: AdvisorLayoutView,
+      beforeEnter: (to) => {
+        const id: number = parseInt(to.params.id as string)
+        const advisorStore = useInformationStore()
+        return InformationService.getAdvisorById(id)
+        .then((response) => {
+          advisorStore.setAdvisor(response.data)
+        }).catch((error) => {
+          console.log(error)
+        })
+      },
+      children: [
+        {
+          path: '',
+          name: 'advisor-detail',
+          component: AdvisorDetail
+        },
+        {
+          path: '/advior/:id/add-data',
+          name: 'advisor-add',
+          component: AdvisorAddData
         }
       ]
     }
