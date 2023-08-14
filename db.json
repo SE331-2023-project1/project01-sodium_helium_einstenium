@@ -95,6 +95,30 @@
       "surname": "Pinkeman",
       "image": "/src/assets/images/Student12.png",
       "teacher": "Mrs.Panda"
+    },
+    {
+      "id": 13,
+      "studentID":"SE-008",
+      "name": "P'To",
+      "surname": "Sillyfool",
+      "image": "/src/assets/images/Student13.png",
+      "teacher": "Mrs.Panda"
+    },
+    {
+      "id": 14,
+      "studentID":"SE-008",
+      "name": "Vin",
+      "surname": "Diesel",
+      "image": "/src/assets/images/Student23.png",
+      "teacher": "Mrs.Panda"
+    },
+    {
+      "id": 15,
+      "studentID":"SE-008",
+      "name": "Jesus",
+      "surname": "Christ",
+      "image": "/src/assets/images/Student17.png",
+      "teacher": "Mrs.Panda"
     }
   ]
 }
