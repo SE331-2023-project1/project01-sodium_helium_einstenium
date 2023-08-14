@@ -5,7 +5,7 @@
       "studentID": "SE-001",
       "name": "Prayuth",
       "surname": "The minister",
-      "image": "/src/assets/images/Student8.png",
+      "image": "/src/assets/images/Student1.png",
       "teacher": "Mr.Chatchai"
     },
     {
@@ -13,7 +13,7 @@
       "studentID": "SE-002",
       "name": "Cherprang ",
       "surname": "BNK48",
-      "image": "/src/assets/images/Student7.png",
+      "image": "/src/assets/images/Student2.png",
       "teacher": "Mr.Chaichat"
     },
     {
@@ -29,7 +29,7 @@
       "studentID":"SE-004",
       "name": "Asher",
       "surname": "Barton",
-      "image": "/src/assets/images/Student1.JPG",
+      "image": "/src/assets/images/Student7.JPG",
       "teacher": "Mrs.Panda"
     },
     {
@@ -37,7 +37,7 @@
       "studentID":"SE-005",
       "name": "Ignatius",
       "surname": "Sears",
-      "image": "/src/assets/images/Student2.png",
+      "image": "/src/assets/images/Student8.png",
       "teacher": "Mrs.Panda"
     },
     {
@@ -62,6 +62,38 @@
       "name": "Macon",
       "surname": "Albert",
       "image": "/src/assets/images/Student5.png",
+      "teacher": "Mrs.Panda"
+    },
+    {
+      "id": 9,
+      "studentID":"SE-008",
+      "name": "Robert",
+      "surname": "Oppenheimer",
+      "image": "/src/assets/images/Student9.png",
+      "teacher": "Mrs.Panda"
+    },
+    {
+      "id": 10,
+      "studentID":"SE-008",
+      "name": "Robert",
+      "surname": "Oppenheimer",
+      "image": "/src/assets/images/Student10.png",
+      "teacher": "Mrs.Panda"
+    },
+    {
+      "id": 11,
+      "studentID":"SE-008",
+      "name": "Walter",
+      "surname": "White",
+      "image": "/src/assets/images/Student11.png",
+      "teacher": "Mrs.Panda"
+    },
+    {
+      "id": 12,
+      "studentID":"SE-008",
+      "name": "Jesse",
+      "surname": "Pinkeman",
+      "image": "/src/assets/images/Student12.png",
       "teacher": "Mrs.Panda"
     }
   ]
