@@ -7,7 +7,8 @@
       "name": "Yanwarut",
       "surname": "Suksawat",
       "image": "/src/assets/images/Student1.JPG",
-      "teacher": "Mr.Chatchai"
+      "advisorId": 3
+
     },
     {
       "id": 2,
@@ -15,7 +16,7 @@
       "name": "Cherprang ",
       "surname": "BNK48",
       "image": "/src/assets/images/Student22.jpg",
-      "teacher": "Mr.Chaichat"
+      "advisorId": 4
     },
     {
       "id": 3,
@@ -23,7 +24,8 @@
       "name": "Nobi",
       "surname": "Nobita",
       "image": "/src/assets/images/Student6.jpg",
-      "teacher": "Mrs.Panda"
+      "advisorId": 1
+
     },
     {
       "id": 4,
@@ -31,7 +33,7 @@
       "name": "Asher",
       "surname": "Barton",
       "image": "/src/assets/images/Student7.jpg",
-      "teacher": "Mrs.Panda"
+      "advisorId": 1
     },
     {
       "id": 5,
@@ -39,7 +41,7 @@
       "name": "Ignatius",
       "surname": "Sears",
       "image": "/src/assets/images/Student8.jpg",
-      "teacher": "Mrs.Panda"
+      "advisorId": 4
     },
     {
       "id": 6,
@@ -47,7 +49,7 @@
       "name": "Rebecca",
       "surname": "Gordon",
       "image": "/src/assets/images/Student3.png",
-      "teacher": "Mrs.Panda"
+      "advisorId": 2
     },
     {
       "id": 7,
@@ -55,7 +57,7 @@
       "name": "Upton",
       "surname": "Glover",
       "image": "/src/assets/images/Student4.jpg",
-      "teacher": "Mrs.Panda"
+      "advisorId": 3
     },
     {
       "id": 8,
@@ -63,100 +65,95 @@
       "name": "Macon",
       "surname": "Albert",
       "image": "/src/assets/images/Student5.jpg",
-      "teacher": "Mrs.Panda"
+      "advisorId": 3
     },
     {
       "id": 9,
-      "studentID":"SE-008",
+      "studentID":"SE-009",
       "name": "Robert",
       "surname": "Oppenheimer",
       "image": "/src/assets/images/Student9.jpg",
-      "teacher": "Mrs.Panda"
+      "advisorId": 2
     },
     {
       "id": 10,
-      "studentID":"SE-008",
+      "studentID":"SE-010",
       "name": "Robert",
       "surname": "Oppenheimer",
       "image": "/src/assets/images/Student10.jpg",
-      "teacher": "Mrs.Panda"
+      "advisorId": 2
     },
     {
       "id": 11,
-      "studentID":"SE-008",
+      "studentID":"SE-011",
       "name": "Walter",
       "surname": "White",
       "image": "/src/assets/images/Student11.jpg",
-      "teacher": "Mrs.Panda"
+      "advisorId": 5
     },
     {
       "id": 12,
-      "studentID":"SE-008",
+      "studentID":"SE-012",
       "name": "Jesse",
       "surname": "Pinkeman",
       "image": "/src/assets/images/Student12.jpg",
-      "teacher": "Mrs.Panda"
+      "advisorId": 5
     },
     {
       "id": 13,
-      "studentID":"SE-008",
+      "studentID":"SE-013",
       "name": "P'To",
       "surname": "Sillyfool",
       "image": "/src/assets/images/Student13.jpg",
-      "teacher": "Mrs.Panda"
+      "advisorId": 5
     },
     {
       "id": 14,
-      "studentID":"SE-008",
+      "studentID":"SE-014",
       "name": "Vin",
       "surname": "Diesel",
       "image": "/src/assets/images/Student23.jpg",
-      "teacher": "Mrs.Panda"
+      "advisorId": 2
     },
     {
       "id": 15,
-      "studentID":"SE-008",
+      "studentID":"SE-015",
       "name": "Jesus",
       "surname": "Christ",
       "image": "/src/assets/images/Student17.jpg",
-      "teacher": "Mrs.Panda"
+      "advisorId": 5
     }
 
   ],
-  "Advisors": [
+  "advisors": [
   {
     "id":"1",
-    "advisorID":"SEA-001" ,
     "name":"Master",
-    "surename":"Roshi",
+    "surname":"Roshi",
     "image":"https://static.wikia.nocookie.net/dragonball/images/e/e0/BuffRoshi%28PtP%29.png/revision/latest?cb=20170507163853"
   },
   {
     "id":"2",
-    "advisorID":"SEA-002" ,
     "name":"Doctor",
-    "surename":"Fish",
+    "surname":"Fish",
     "image":"https://storage-wp.thaipost.net/2022/05/%E0%B8%AB%E0%B8%A1%E0%B8%AD%E0%B8%9B%E0%B8%A5%E0%B8%B2-3.jpg"
   },
   {
     "id":"3",
-    "advisorID":"SEA-003" ,
     "name":"Ricardo",
-    "surename":"Milos",
+    "surname":"Milos",
     "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKuytkKRrbL9cS7FhwW8ywHptwKj0oE63Fz0MUKuvBgrltibfwXvmBHUeadM_nreicaqs&usqp=CAU"
   },
   {
     "id":"4",
-    "advisorID":"SEA-004" ,
     "name":"Billy",
-    "surename":"Herrington",
+    "surname":"Herrington",
     "image":"https://i1.sndcdn.com/avatars-000411292317-dt2f28-t500x500.jpg"
   },
   {
     "id":"5",
-    "advisorID":"SEA-005" ,
     "name":"Dreamy",
-    "surename":"Bull",
+    "surname":"Bull",
     "image":"https://i1.sndcdn.com/artworks-CnVRs1wSaUG51r6t-hYuXBA-t500x500.jpg"
   }
 ]

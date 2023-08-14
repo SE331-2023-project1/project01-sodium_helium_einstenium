@@ -5,5 +5,5 @@ export interface Information{
     surname: string
     studentProfile: string
     image: string
-    teacher: string
+    advisorId: number
 }

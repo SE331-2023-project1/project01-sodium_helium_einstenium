@@ -11,10 +11,10 @@ const props = defineProps({
 
 <template>
   <div class="student-card">
-    
     <span> Student ID: {{ student.studentID }}</span>
-    <p> Name: {{ student.name }}</p>
-    <p> Surname: {{ student.surname }}</p>
+    <RouterLink class="student-link" :to="{ name: 'student-detail', params: {id: student?.id}}">
+    <p> Name: {{ student.name }}  {{ student.surname }}</p>
+    </RouterLink>
   </div>
 </template>
 
