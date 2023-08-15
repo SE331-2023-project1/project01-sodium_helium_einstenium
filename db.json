@@ -127,31 +127,31 @@
   ],
   "advisors": [
   {
-    "id":"1",
+    "id": 1,
     "name":"Master",
     "surname":"Roshi",
-    "image":"https://static.wikia.nocookie.net/dragonball/images/e/e0/BuffRoshi%28PtP%29.png/revision/latest?cb=20170507163853"
+    "image":"https://i.ibb.co/9qyLBJm/Master-roshi-enhanced.webp"
   },
   {
-    "id":"2",
+    "id": 2,
     "name":"Doctor",
     "surname":"Fish",
     "image":"https://storage-wp.thaipost.net/2022/05/%E0%B8%AB%E0%B8%A1%E0%B8%AD%E0%B8%9B%E0%B8%A5%E0%B8%B2-3.jpg"
   },
   {
-    "id":"3",
+    "id": 3,
     "name":"Ricardo",
     "surname":"Milos",
     "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKuytkKRrbL9cS7FhwW8ywHptwKj0oE63Fz0MUKuvBgrltibfwXvmBHUeadM_nreicaqs&usqp=CAU"
   },
   {
-    "id":"4",
+    "id": 4,
     "name":"Billy",
     "surname":"Herrington",
     "image":"https://i1.sndcdn.com/avatars-000411292317-dt2f28-t500x500.jpg"
   },
   {
-    "id":"5",
+    "id": 5,
     "name":"Dreamy",
     "surname":"Bull",
     "image":"https://i1.sndcdn.com/artworks-CnVRs1wSaUG51r6t-hYuXBA-t500x500.jpg"

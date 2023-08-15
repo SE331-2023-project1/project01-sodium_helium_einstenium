@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { Information } from '../info'
 import type { PropType } from 'vue'
-const props = defineProps({
+defineProps({
   student: {
     type: Object as PropType<Information>,
     required: true

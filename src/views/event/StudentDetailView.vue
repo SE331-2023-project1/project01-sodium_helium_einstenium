@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Information } from '@/info';
+import type { AdvisorInfo } from '@/info'
 import { type PropType } from 'vue';
 
 defineProps({
@@ -8,9 +9,9 @@ defineProps({
         require: true
     },
     advisor: {
-        type: Object as PropType<Information>,
+        type: Object as PropType<AdvisorInfo>,
         require: true
-    }
+    },
 })
 </script>
 <template>

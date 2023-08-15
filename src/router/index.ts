@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import AboutView from '../views/AboutView.vue'
+import StudentListView from '../views/StudentListView.vue'
+import AdvisorListView from '@/views/AdvisorListView.vue'
 import StudentDetailView from '@/views/event/StudentDetailView.vue'
 import StudentLayoutView from '@/views/event/StudentLayoutView.vue'
 import { useInformationStore } from '@/stores/informantion'
@@ -15,13 +15,13 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: HomeView
+      name: 'student-list',
+      component: StudentListView
     },
     {
-      path: '/about',
-      name: 'about',
-      component: AboutView
+      path: '/advisor',
+      name: 'advisor-list',
+      component: AdvisorListView
     },
     {
       path: '/student/:id',

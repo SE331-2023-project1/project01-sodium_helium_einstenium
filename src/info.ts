@@ -7,3 +7,10 @@ export interface Information{
     image: string
     advisorId: number
 }
+
+export interface AdvisorInfo {
+    id: number
+    name: string
+    surname: string
+    image: string
+}
