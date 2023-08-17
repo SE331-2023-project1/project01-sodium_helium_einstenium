@@ -14,18 +14,16 @@ import type { CommentInfo, Information } from '@/info';
     id: String,
   });
   
-  const router = useRouter();
-  const studentId = router.currentRoute.value.params.id.toString();
   const store = useCommentStore();
   function addComment(comment:CommentInfo) {
     store.addComment(comment);
   }
-  const comments = computed(() => store.getCommentByStudentId(studentId));
+  
   </script>
   <template>
     <div>
       <p>Make the comment here</p>
-      <StudentCommentList v-if="comments.length" :comments="comments"></StudentCommentList>
+
       <div v-if="student">
         <StudentCommentForm :student="student" @comment-submitted="addComment"></StudentCommentForm>
       </div>

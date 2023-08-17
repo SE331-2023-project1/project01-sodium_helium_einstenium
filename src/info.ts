@@ -5,14 +5,7 @@ export interface Information{
     surname: string
     studentProfile: string
     image: string
-    advisorId: number
-    comments: 
-    [{ 
-        name: string
-        surname: string
-        comment: string
-        date: string
-    }]
+    advisorId: string
 }
 
 export interface AdvisorInfo {
