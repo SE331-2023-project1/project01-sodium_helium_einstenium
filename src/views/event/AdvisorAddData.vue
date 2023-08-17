@@ -2,7 +2,7 @@
 import type { Information } from '@/info'
 import type { PropType } from 'vue'
 
-const props = defineProps({
+defineProps({
    advisor:{
      type : Object as PropType<Information>,
      require: true
