@@ -35,9 +35,9 @@ console.log(studentsAdd)
     <p>{{ student.name }}  {{ student.surname }}</p>
    <RouterLink :to="{ name: 'advisor-detail', params:{ id: advisor?.id } }">{{ advisor?.name }}  {{ advisor?.surname }}</RouterLink>
    </div>
-   <StudentCommentList v-if="comments.length" :comments="comments"></StudentCommentList>
-   
    <StudentAddDataList v-if="studentsAdd.length" :studentsAdd="studentsAdd"></StudentAddDataList>
+
+   <StudentCommentList v-if="comments.length" :comments="comments"></StudentCommentList>
   
 </div>
 </template>
