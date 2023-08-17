@@ -3,14 +3,12 @@ import { useStudentStore } from '@/stores/informantion';
 import { useAdvisorStore } from '@/stores/advisor'
 import { storeToRefs } from 'pinia';
 import { ref } from 'vue';
-import { useCommentStore } from '@/stores/comment';
+
 
 const studentStore = useStudentStore()
 const advisorStore = useAdvisorStore()
-const commentStore = useCommentStore()
 const student = storeToRefs(studentStore).student
 const advisor = storeToRefs(advisorStore).advisor
-const comments = storeToRefs(commentStore).comments
 const id = ref(student.value?.id)
 </script>
 <template>
@@ -22,7 +20,7 @@ const id = ref(student.value?.id)
         <router-link :to="{ name: 'student-comment',params:{id}}">Add Comment |</router-link>
 
        </div>
-       <RouterView :student="student" :advisor="advisor" :comments="comments"></RouterView>
+       <RouterView :student="student" :advisor="advisor" ></RouterView>
     </div>
 </template>
 <style scoped>

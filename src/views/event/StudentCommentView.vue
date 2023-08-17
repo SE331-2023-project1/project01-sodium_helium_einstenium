@@ -21,7 +21,7 @@ import type { CommentInfo, Information } from '@/info';
     console.log(comment)
     store.addComment(comment);
   }
-  const comments = computed(() => store.getCommentsByStudentId(studentId));
+  const comments = computed(() => store.getCommentsByStudentId());
   </script>
   <template>
     <div>
