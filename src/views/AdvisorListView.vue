@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import AdvisorCard from '@/components/AdvisorCard.vue';
 import type { AdvisorInfo } from '@/info';
-import InformationService from '@/services/InformationService'
+import AdvisorService from '@/services/AdvisorService';
 import type { Ref } from 'vue'
 import { ref } from 'vue'
 
 const advisors: Ref<Array<AdvisorInfo>> = ref([])
-  InformationService.getAdvisor().then((response) => {
+  AdvisorService.getAdvisor().then((response) => {
     advisors.value = response.data
   })
 

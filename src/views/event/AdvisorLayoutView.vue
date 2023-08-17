@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { useInformationStore } from '@/stores/informantion'
+import { useAdvisorStore } from '@/stores/advisor'
 import { storeToRefs } from 'pinia'
 import { ref } from 'vue'
-const store = useInformationStore()
-const advisor = storeToRefs(store).advisor
+const advisorStore = useAdvisorStore()
+const advisor = storeToRefs(advisorStore).advisor
 const id = ref(advisor?.value?.id)
 </script>
 <template>
