@@ -13,7 +13,6 @@ export const useCommentStore = defineStore('comment',{
     },
     getComments() {
       const result = this.comments
-      console.log(result)
       return result
   },
   getCommentByStudentId(studentId: string){

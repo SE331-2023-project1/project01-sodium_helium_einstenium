@@ -11,7 +11,7 @@ defineProps({
 </script>
 <template>
     <div v-for="(comment,index) in comments" :key="index">
-        <p>{{ comment.student_id }}</p>
+        <p>{{comment.student_id}}</p>
         <p>{{comment.student_name}}</p>
         <p>{{comment.student_surname}}</p>
         <p>{{comment.comment}}</p>
