@@ -11,7 +11,7 @@ defineProps({
     advisor: {
         type: Object as PropType<AdvisorInfo>,
         require: true
-    },
+    }
 })
 </script>
 <template>

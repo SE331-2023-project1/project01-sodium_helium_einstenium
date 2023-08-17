@@ -3,13 +3,15 @@ import StudentListView from '../views/StudentListView.vue'
 import AdvisorListView from '@/views/AdvisorListView.vue'
 import StudentDetailView from '@/views/event/StudentDetailView.vue'
 import StudentLayoutView from '@/views/event/StudentLayoutView.vue'
-import { useInformationStore } from '@/stores/informantion'
+import { useStudentStore } from '@/stores/informantion'
 import InformationService from '@/services/InformationService'
 import StudentAddView from '@/views/event/StudentAddView.vue'
 import StudentCommentView from '@/views/event/StudentCommentView.vue'
 import AdvisorLayoutView from '@/views/event/AdvisorLayoutView.vue'
 import AdvisorDetail from '@/views/event/AdvisorDetail.vue'
 import AdvisorAddData from '@/views/event/AdvisorAddData.vue'
+import AdvisorService from '@/services/AdvisorService'
+import { useAdvisorStore } from '@/stores/advisor'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -24,17 +26,18 @@ const router = createRouter({
       component: AdvisorListView
     },
     {
-      path: '/student/:id',
+      path: '/',
       name:  'student-layout',
       component: StudentLayoutView,
+      props: true,
       beforeEnter: (to) => {
         const id: number = parseInt(to.params.id as string)
-        const studentStore = useInformationStore()
-        const advisorStore = useInformationStore()
+        const studentStore = useStudentStore()
+        const advisorStore = useAdvisorStore()
         return InformationService.getStudentById(id)
         .then((response) => {
           studentStore.setStudent(response.data)
-          InformationService.getAdvisorById(response.data.advisorId)
+          AdvisorService.getAdvisorById(response.data.advisorId)
           .then((response) => {
             advisorStore.setAdvisor(response.data)
           })
@@ -45,30 +48,33 @@ const router = createRouter({
       },
       children: [
         {
-          path: '',
+          path: '/student/:id',
           name: 'student-detail',
-          component: StudentDetailView
+          component: StudentDetailView,
+          props:true
         },
         {
-          path: '/student/:id/add-data',
+          path: '/add-data/:id',
           name: 'student-add',
-          component: StudentAddView
+          component: StudentAddView,
+          props: true
         },
         {
-          path: '/student/:id/comment',
+          path: '/comment/:id',
           name: 'student-comment',
-          component: StudentCommentView
+          component: StudentCommentView,
+          props:true
         }
       ]
     },
     {
-      path: '/advisor/:id',
+      path: '/',
       name: 'advisor-layout',
       component: AdvisorLayoutView,
       beforeEnter: (to) => {
         const id: number = parseInt(to.params.id as string)
-        const advisorStore = useInformationStore()
-        return InformationService.getAdvisorById(id)
+        const advisorStore = useAdvisorStore()
+        return AdvisorService.getAdvisorById(id)
         .then((response) => {
           advisorStore.setAdvisor(response.data)
         }).catch((error) => {
@@ -77,14 +83,16 @@ const router = createRouter({
       },
       children: [
         {
-          path: '',
+          path: '/advisor/:id',
           name: 'advisor-detail',
-          component: AdvisorDetail
+          component: AdvisorDetail,
+          props: true
         },
         {
-          path: '/advior/:id/add-data',
+          path: '/advior-add/:id',
           name: 'advisor-add',
-          component: AdvisorAddData
+          component: AdvisorAddData,
+          props: true
         }
       ]
     }

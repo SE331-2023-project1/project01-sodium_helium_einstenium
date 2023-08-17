@@ -6,6 +6,13 @@ export interface Information{
     studentProfile: string
     image: string
     advisorId: number
+    comments: 
+    [{ 
+        name: string
+        surname: string
+        comment: string
+        date: string
+    }]
 }
 
 export interface AdvisorInfo {
@@ -13,4 +20,12 @@ export interface AdvisorInfo {
     name: string
     surname: string
     image: string
+}
+
+export interface CommentInfo {
+    student_id: string
+    student_name: string
+    student_surname: string
+    comment: string
+    date: string
 }

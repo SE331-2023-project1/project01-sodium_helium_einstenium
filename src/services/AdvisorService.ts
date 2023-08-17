@@ -1,7 +1,6 @@
 import axios from 'axios'
 import type { AxiosInstance, AxiosResponse } from 'axios'
-import type { Information } from '@/info'
-
+import type { AdvisorInfo } from '@/info'
 const apiClient: AxiosInstance = axios.create({
     baseURL: "http://localhost:3004",
     withCredentials: false,
@@ -10,12 +9,11 @@ const apiClient: AxiosInstance = axios.create({
         'Content-Type': 'application/json'
     }
 })
-
 export default {
-    getStudent(): Promise<AxiosResponse<Information[]>> {
-        return apiClient.get<Information[]>('/students')
+    getAdvisor(): Promise<AxiosResponse<AdvisorInfo[]>>{
+        return apiClient.get<AdvisorInfo[]>('/advisors')
     },
-    getStudentById(id: number): Promise<AxiosResponse<Information>> {
-        return apiClient.get<Information>('students/' + id.toString())
-    }
+    getAdvisorById(id:number): Promise<AxiosResponse<AdvisorInfo>>{
+        return apiClient.get<AdvisorInfo>('advisors/'+ id.toString())
+    },
 }

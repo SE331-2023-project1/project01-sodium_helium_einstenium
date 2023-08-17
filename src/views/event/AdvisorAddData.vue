@@ -6,6 +6,9 @@ const props = defineProps({
    advisor:{
      type : Object as PropType<Information>,
      require: true
+    },
+    id:{
+      type: String
     }
 })
 
