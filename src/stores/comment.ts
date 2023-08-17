@@ -7,14 +7,13 @@ export const useCommentStore = defineStore('comment',{
   }),
   actions: {
     addComment(comment: CommentInfo){
-      console.log(this.comments)
       this.$patch((state) => {
        state.comments.push(comment);
-       console.log(state)
     });
     },
-    getCommentsByStudentId(studentId:string) {
-      return this.comments.filter(comment => comment.student_id === studentId);
-  }
+    getCommentsByStudentId() {
+      return this.comments
+  },
+  
 }
 })
