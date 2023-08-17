@@ -1,20 +1,20 @@
-import type { Information } from "@/info"
+import type { StudentInfo } from "@/info"
 import { defineStore } from "pinia"
 export const useStudentStore = defineStore('student',{
     state: () => ({
-        student: null as Information | null,
-        students: [] as Information[]
+        student: null as StudentInfo | null,
+        students: [] as StudentInfo[]
     }),
     actions: {
-        setStudent(student: Information){
+        setStudent(student: StudentInfo){
             this.student = student
         },
         
-        addStudentData(studentData: Information){
+        addStudentData(studentData: StudentInfo) {
             this.$patch((state) => {
-                state.students.push(studentData)
-            })
-        },
+              state.students.push(studentData)
+            });
+          },
         getStudentData(){
             const result = this.students
             return result

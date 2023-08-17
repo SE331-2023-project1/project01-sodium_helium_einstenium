@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useStudentStore } from '@/stores/informantion';
+import { useStudentStore } from '@/stores/student';
 import { useAdvisorStore } from '@/stores/advisor'
 import { storeToRefs } from 'pinia';
 import { ref } from 'vue';
@@ -24,4 +24,4 @@ const id = ref(student.value?.id)
     </div>
 </template>
 <style scoped>
-</style>
+</style>@/stores/student

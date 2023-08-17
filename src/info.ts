@@ -1,4 +1,4 @@
-export interface Information{
+export interface StudentInfo{
     id: number
     studentID: string
     name: string
@@ -6,6 +6,8 @@ export interface Information{
     studentProfile: string
     image: string
     advisorId: string
+    addedData: string
+    dataHeader: string
 }
 
 export interface AdvisorInfo {
@@ -21,4 +23,5 @@ export interface CommentInfo {
     student_surname: string
     comment: string
     date: string
+    professor_name: string
 }

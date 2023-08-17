@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import type { AdvisorInfo, Information } from '@/info'
+import type { AdvisorInfo, StudentInfo } from '@/info'
 import type { PropType } from 'vue'
 import StudentAddDataForm from '@/components/StudentAddDataForm.vue'
-import { useStudentStore } from '@/stores/informantion';
+import { useStudentStore } from '@/stores/student';
 defineProps({
     student: {
-        type: Object as PropType<Information>,
+        type: Object as PropType<StudentInfo>,
         require: true
     },
     advisor: {
@@ -16,13 +16,16 @@ defineProps({
     
 })
 const store = useStudentStore()
-function addStudentDataBtn(studentData: Information){
+
+function addStudentDataBtn(studentData: StudentInfo){
+   console.log( studentData.id)
    store.addStudentData(studentData)
+   console.log('After Add Btn ' + studentData.id)
 }
 </script>
 <template>
     <div v-if="student">
-        <StudentAddDataForm :student="student" @add-student-submitted="addStudentDataBtn"></StudentAddDataForm>
+        <StudentAddDataForm :student="student" @student-submitted="addStudentDataBtn"></StudentAddDataForm>
     </div>
     
-</template>
+</template>@/stores/student

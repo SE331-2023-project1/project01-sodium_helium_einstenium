@@ -1,15 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import StudentListView from '../views/StudentListView.vue'
 import AdvisorListView from '@/views/AdvisorListView.vue'
-import StudentDetailView from '@/views/event/StudentDetailView.vue'
-import StudentLayoutView from '@/views/event/StudentLayoutView.vue'
-import { useStudentStore } from '@/stores/informantion'
-import InformationService from '@/services/InformationService'
-import StudentAddView from '@/views/event/StudentAddView.vue'
-import StudentCommentView from '@/views/event/StudentCommentView.vue'
-import AdvisorLayoutView from '@/views/event/AdvisorLayoutView.vue'
-import AdvisorDetail from '@/views/event/AdvisorDetail.vue'
-import AdvisorAddData from '@/views/event/AdvisorAddData.vue'
+import StudentDetailView from '@/views/student/StudentDetailView.vue'
+import StudentLayoutView from '@/views/student/StudentLayoutView.vue'
+import { useStudentStore } from '@/stores/student'
+import StudentService from '@/services/StudentService'
+import StudentAddView from '@/views/student/StudentAddView.vue'
+import StudentCommentView from '@/views/student/StudentCommentView.vue'
+import AdvisorLayoutView from '@/views/advisor/AdvisorLayoutView.vue'
+import AdvisorDetail from '@/views/advisor/AdvisorDetail.vue'
+import AdvisorAddData from '@/views/advisor/AdvisorAddData.vue'
 import AdvisorService from '@/services/AdvisorService'
 import { useAdvisorStore } from '@/stores/advisor'
 const router = createRouter({
@@ -35,10 +35,10 @@ const router = createRouter({
         const id: number = parseInt(to.params.id as string)
         const studentStore = useStudentStore()
         const advisorStore = useAdvisorStore()
-        return InformationService.getStudentById(id)
+        return StudentService.getStudentById(id)
         .then((response) => {
           studentStore.setStudent(response.data)
-          AdvisorService.getAdvisorById(response.data.advisorId)
+          AdvisorService.getAdvisorById(response.data.id)
           .then((response) => {
             advisorStore.setAdvisor(response.data)
           })

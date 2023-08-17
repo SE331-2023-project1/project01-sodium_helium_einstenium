@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import StudentCard from '@/components/StudentCard.vue'
-import type { Information } from '@/info'
-import InformationService from '@/services/InformationService'
+import type { StudentInfo } from '@/info'
+import StudentService from '@/services/StudentService'
 import type { Ref } from 'vue'
 import { ref, computed } from 'vue'
 import { onBeforeRouteUpdate } from 'vue-router'
@@ -14,8 +14,8 @@ const props = defineProps({
 })
 const perPage = ref<number>(5)
 
-const students: Ref<Array<Information>> = ref([])
-InformationService.getStudent(perPage.value, props.page).then((response) => {
+const students: Ref<Array<StudentInfo>> = ref([])
+StudentService.getStudent(perPage.value, props.page).then((response) => {
   students.value = response.data
   totalEvent.value = response.headers['x-total-count']
 })
@@ -28,7 +28,7 @@ const hasNextPage = computed(() => {
 onBeforeRouteUpdate((to, from, next) => {
   const toPage = Number(to.query.page)
 
-  InformationService.getStudent(5, toPage).then((response) => {
+  StudentService.getStudent(5, toPage).then((response) => {
     students.value = response.data
     totalEvent.value = response.headers['x-total-count']
     next()
@@ -81,3 +81,4 @@ onBeforeRouteUpdate((to, from, next) => {
   align-items: center;
 }
 </style>
+@/services/StudentService

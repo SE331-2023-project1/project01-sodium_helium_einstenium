@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import type { Information } from '@/info';
+import type { StudentInfo } from '@/info';
 import type { AdvisorInfo } from '@/info'
 import router from '@/router';
-import { useStudentStore } from '@/stores/informantion';
+import { useStudentStore } from '@/stores/student';
 import { computed, type PropType } from 'vue';
 import StudentAddDataList from '@/components/StudentAddDataList.vue';
 import { useCommentStore } from '@/stores/comment';
 import StudentCommentList from '@/components/StudentCommentList.vue';
 defineProps({
     student: {
-        type: Object as PropType<Information>,
+        type: Object as PropType<StudentInfo>,
         require: true
     },
     advisor: {
@@ -36,6 +36,7 @@ console.log(studentsAdd)
    <RouterLink :to="{ name: 'advisor-detail', params:{ id: advisor?.id } }">{{ advisor?.name }}  {{ advisor?.surname }}</RouterLink>
    </div>
    <StudentCommentList v-if="comments.length" :comments="comments"></StudentCommentList>
+   
    <StudentAddDataList v-if="studentsAdd.length" :studentsAdd="studentsAdd"></StudentAddDataList>
   
 </div>
@@ -50,4 +51,4 @@ console.log(studentsAdd)
    flex-direction: column;
    align-items: center;
 }
-</style>
+</style>@/stores/student
