@@ -16,4 +16,7 @@ export default {
     getAdvisorById(id:number): Promise<AxiosResponse<AdvisorInfo>>{
         return apiClient.get<AdvisorInfo>('advisors/'+ id.toString())
     },
+    addAdvisor(id:number, data: AdvisorInfo): Promise<AxiosResponse<AdvisorInfo>>{
+        return apiClient.post<AdvisorInfo>('/advisor' + id.toString(), data)
+    }
 }

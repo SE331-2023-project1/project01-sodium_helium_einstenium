@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import StudentListView from '../views/StudentListView.vue'
-import AdvisorListView from '@/views/AdvisorListView.vue'
+import AdvisorListView from '../views/AdvisorListView.vue'
+import CreatAdvisorView from '../views/CreateAdvisorView.vue'
 import StudentDetailView from '@/views/student/StudentDetailView.vue'
 import StudentLayoutView from '@/views/student/StudentLayoutView.vue'
 import { useStudentStore } from '@/stores/student'
@@ -25,6 +26,11 @@ const router = createRouter({
       path: '/advisor',
       name: 'advisor-list',
       component: AdvisorListView
+    },
+    {
+      path: '/create-advisor',
+      name: 'create-advisor',
+      component: CreatAdvisorView
     },
     {
       path: '/',
