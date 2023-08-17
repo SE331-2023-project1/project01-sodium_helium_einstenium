@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { Information } from '@/info';
-import { reactive, ref, type PropType} from 'vue';
+import { reactive, type PropType} from 'vue';
 
 const { student } = defineProps({
   student: {

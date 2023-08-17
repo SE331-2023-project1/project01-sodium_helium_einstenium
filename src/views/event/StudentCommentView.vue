@@ -18,10 +18,9 @@ import type { CommentInfo, Information } from '@/info';
   const studentId = router.currentRoute.value.params.id.toString();
   const store = useCommentStore();
   function addComment(comment:CommentInfo) {
-    console.log(comment)
     store.addComment(comment);
   }
-  const comments = computed(() => store.getCommentsByStudentId());
+  const comments = computed(() => store.getCommentByStudentId(studentId));
   </script>
   <template>
     <div>

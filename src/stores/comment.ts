@@ -11,9 +11,14 @@ export const useCommentStore = defineStore('comment',{
        state.comments.push(comment);
     });
     },
-    getCommentsByStudentId() {
-      return this.comments
+    getComments() {
+      const result = this.comments
+      console.log(result)
+      return result
   },
+  getCommentByStudentId(studentId: string){
+    return this.comments.filter(comment => comment.student_id == studentId)
+  }
   
 }
 })
