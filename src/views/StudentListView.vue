@@ -30,7 +30,7 @@ onBeforeRouteUpdate((to, from, next) => {
 
   StudentService.getStudent(5, toPage).then((response) => {
     students.value = response.data
-    totalEvent.value = response.headers['x-total-count']
+    totalEvent.value  = response.headers['x-total-count']
     next()
   }).catch((error) => {
     console.log(error)

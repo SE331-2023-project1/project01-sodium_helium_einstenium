@@ -12,9 +12,10 @@ defineProps({
 })
 const store = useAdvisorStore();
 function createAdvisor(advisor: AdvisorInfo){
+    console.log("Before add advisor" + advisor.name)
     store.addAdvisor(advisor)
 }
 </script>
 <template>
-        <AdvisorCreateForm :advisor?="advisor" @create-submitted="createAdvisor"></AdvisorCreateForm>
+        <AdvisorCreateForm @create-submitted="createAdvisor"></AdvisorCreateForm>
 </template>

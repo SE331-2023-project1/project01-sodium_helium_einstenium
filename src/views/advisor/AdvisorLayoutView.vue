@@ -1,10 +1,11 @@
 <script setup lang="ts">
+import router from '@/router';
 import { useAdvisorStore } from '@/stores/advisor'
 import { storeToRefs } from 'pinia'
-import { ref } from 'vue'
 const advisorStore = useAdvisorStore()
 const advisor = storeToRefs(advisorStore).advisor
-const id = ref(advisor?.value?.id)
+const id = router.currentRoute.value.params.id
+
 </script>
 <template>
   <div v-if="advisor">

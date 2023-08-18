@@ -14,7 +14,6 @@ defineProps({
     },
     advisor: {
         type: Object as PropType<AdvisorInfo>,
-        require: true
     }
 })
 const studentStore = useStudentStore()
@@ -38,7 +37,6 @@ console.log(studentsAdd)
    <StudentAddDataList v-if="studentsAdd.length" :studentsAdd="studentsAdd"></StudentAddDataList>
 
    <StudentCommentList v-if="comments.length" :comments="comments"></StudentCommentList>
-  
 </div>
 </template>
 

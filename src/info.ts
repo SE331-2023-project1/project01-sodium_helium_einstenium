@@ -5,7 +5,7 @@ export interface StudentInfo{
     surname: string
     studentProfile: string
     image: string
-    advisorId: string
+    advisorId: number
     addedData: string
     dataHeader: string
 }

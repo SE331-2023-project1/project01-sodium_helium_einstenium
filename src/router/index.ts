@@ -9,10 +9,10 @@ import StudentService from '@/services/StudentService'
 import StudentAddView from '@/views/student/StudentAddView.vue'
 import StudentCommentView from '@/views/student/StudentCommentView.vue'
 import AdvisorLayoutView from '@/views/advisor/AdvisorLayoutView.vue'
-import AdvisorDetail from '@/views/advisor/AdvisorDetail.vue'
-import AdvisorAddData from '@/views/advisor/AdvisorAddData.vue'
+import AdvisorDetailView from '@/views/advisor/AdvisorDetailView.vue'
 import AdvisorService from '@/services/AdvisorService'
 import { useAdvisorStore } from '@/stores/advisor'
+import AdvisorCreatedDetailVue from '@/views/advisor/AdvisorCreatedDetail.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -44,7 +44,7 @@ const router = createRouter({
         return StudentService.getStudentById(id)
         .then((response) => {
           studentStore.setStudent(response.data)
-          AdvisorService.getAdvisorById(response.data.id)
+          AdvisorService.getAdvisorById(response.data.advisorId)
           .then((response) => {
             advisorStore.setAdvisor(response.data)
           })
@@ -92,16 +92,15 @@ const router = createRouter({
         {
           path: '/advisor/:id',
           name: 'advisor-detail',
-          component: AdvisorDetail,
-          props: true
+          component: AdvisorDetailView,
         },
-        {
-          path: '/advior-add/:id',
-          name: 'advisor-add',
-          component: AdvisorAddData,
-          props: true
-        }
       ]
+    },
+    {
+      path: '/create-advisor/:id',
+      name: 'advisor-create-detail',
+      component: AdvisorCreatedDetailVue,
+      props:true
     }
   ]
 })

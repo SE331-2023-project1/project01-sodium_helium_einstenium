@@ -1,7 +1,11 @@
 <script setup lang="ts">
-
+import type { AdvisorInfo } from '@/info';
 import { reactive, type PropType } from 'vue'
-
+defineProps ({
+    advisor: {
+        type: Object as PropType<AdvisorInfo>   
+    }
+})
 const emit = defineEmits(['create-submitted'])
 const form = reactive({
     id: '',

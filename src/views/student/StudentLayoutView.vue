@@ -24,4 +24,4 @@ const id = ref(student.value?.id)
     </div>
 </template>
 <style scoped>
-</style>@/stores/student
+</style>

@@ -16,6 +16,9 @@ export const useAdvisorStore = defineStore('advisor',{
         },
         getCreatedAdvisor(){
             return this.advisors
+        },
+        getCreatedAdvisorById(advisorId : number){
+            return this.advisors.filter(advisor => advisor.id === advisorId)
         }
     }
 })

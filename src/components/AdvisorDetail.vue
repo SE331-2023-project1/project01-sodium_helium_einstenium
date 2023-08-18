@@ -1,9 +1,6 @@
 <script setup lang="ts">
 import type { AdvisorInfo } from '@/info'
-import { useAdvisorStore } from '@/stores/advisor';
-import { computed, type PropType } from 'vue'
-import AdvisorCreatedDetail from '@/components/AdvisorCreatedDetail.vue'
-
+import { type PropType } from 'vue'
 
 defineProps({
   advisor: {
@@ -11,10 +8,6 @@ defineProps({
     require: true
   }
 })
-
-const advisorStore = useAdvisorStore()
-const createAdvisors = computed(() => advisorStore.getCreatedAdvisor())
-
 </script>
 <template>
     <div class="advisor-detail" v-if="advisor">
@@ -26,8 +19,7 @@ const createAdvisors = computed(() => advisorStore.getCreatedAdvisor())
             <p>Surname: {{ advisor.surname }}</p>
         </div>
     </div>
-    <AdvisorCreatedDetail v-if="createAdvisors.length" :createAdvisors="createAdvisors"></AdvisorCreatedDetail>
-</template>
+  </template>
 
 <style scoped>
 
