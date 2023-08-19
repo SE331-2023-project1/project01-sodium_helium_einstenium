@@ -156,6 +156,34 @@
     "surname":"Bull",
     "image":"https://i1.sndcdn.com/artworks-CnVRs1wSaUG51r6t-hYuXBA-t500x500.jpg"
   }
+],
+"course": [
+  {
+    "id": 1001,
+    "courseName": "English",
+    "professor": "Billy Herrington"
+  },
+  {
+    "id": 1002,
+    "courseName": "Chi Teaching",
+    "professor": "Master Roshi"
+  },
+  {
+    "id": 1003,
+    "courseName": "Fishing",
+    "professor": "Doctor Fish"
+  },
+  {
+    "id": 1004,
+    "courseName": "Pole Dancing",
+    "professor": "Ricardo Milos"
+  },
+  {
+    "id": 1005,
+    "courseName": "Bull taming",
+    "professor": "Dreamy Bull"
+  }
+
 ]
     
 }

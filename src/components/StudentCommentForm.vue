@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { StudentInfo } from '@/info'
 import { reactive, type PropType } from 'vue'
+
+
 const { student } = defineProps({
   student: {
     type: Object as PropType<StudentInfo>,
@@ -31,6 +33,8 @@ function onSubmit() {
   form.comment = ''
   form.date = ''
   form.professor_name = ''
+
+  
 }
 </script>
 <template>
