@@ -8,6 +8,7 @@ export interface StudentInfo{
     advisorId: number
     addedData: string
     dataHeader: string
+    courses: string[]
 }
 
 export interface AdvisorInfo {

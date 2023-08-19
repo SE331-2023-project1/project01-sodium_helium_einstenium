@@ -7,16 +7,19 @@
       "name": "Yanwarut",
       "surname": "Suksawat",
       "image": "/src/assets/images/Student1.JPG",
-      "advisorId": 3
+      "advisorId": 3,
+      "courses": ["Math","Geomancy"]
 
     },
+
     {
       "id": 2,
       "studentID": "SE-002",
       "name": "Cherprang ",
       "surname": "BNK48",
       "image": "/src/assets/images/Student22.jpg",
-      "advisorId": 4
+      "advisorId": 4,
+      "courses": ["Math","Geomancy"]
     },
     {
       "id": 3,
@@ -24,7 +27,8 @@
       "name": "Nobi",
       "surname": "Nobita",
       "image": "/src/assets/images/Student6.jpg",
-      "advisorId": 1
+      "advisorId": 1,
+      "courses": ["Math","Geomancy"]
 
     },
     {
@@ -33,7 +37,8 @@
       "name": "Asher",
       "surname": "Barton",
       "image": "/src/assets/images/Student7.jpg",
-      "advisorId": 1
+      "advisorId": 1,
+      "courses": ["Math","Geomancy"]
     },
     {
       "id": 5,
@@ -41,7 +46,8 @@
       "name": "Ignatius",
       "surname": "Sears",
       "image": "/src/assets/images/Student8.jpg",
-      "advisorId": 4
+      "advisorId": 4,
+      "courses": ["Math","Geomancy"]
     },
     {
       "id": 6,
@@ -49,7 +55,8 @@
       "name": "Rebecca",
       "surname": "Gordon",
       "image": "/src/assets/images/Student3.png",
-      "advisorId": 2
+      "advisorId": 2,
+      "courses": ["Math","Geomancy"]
     },
     {
       "id": 7,
@@ -57,7 +64,8 @@
       "name": "Upton",
       "surname": "Glover",
       "image": "/src/assets/images/Student4.jpg",
-      "advisorId": 3
+      "advisorId": 3,
+      "courses": ["Math","Geomancy"]
     },
     {
       "id": 8,
@@ -65,15 +73,17 @@
       "name": "Macon",
       "surname": "Albert",
       "image": "/src/assets/images/Student5.jpg",
-      "advisorId": 3
+      "advisorId": 3,
+      "courses": ["Math","Geomancy"]
     },
     {
       "id": 9,
       "studentID":"SE-009",
-      "name": "Robert",
-      "surname": "Oppenheimer",
+      "name": "Kru",
+      "surname": "Kaikaew",
       "image": "/src/assets/images/Student9.jpg",
-      "advisorId": 2
+      "advisorId": 2,
+      "courses": ["Math","Geomancy"]
     },
     {
       "id": 10,
@@ -81,7 +91,8 @@
       "name": "Robert",
       "surname": "Oppenheimer",
       "image": "/src/assets/images/Student10.jpg",
-      "advisorId": 2
+      "advisorId": 2,
+      "courses": ["Math","Geomancy"]
     },
     {
       "id": 11,
@@ -89,7 +100,8 @@
       "name": "Walter",
       "surname": "White",
       "image": "/src/assets/images/Student11.jpg",
-      "advisorId": 5
+      "advisorId": 5,
+      "courses": ["Math","Geomancy"]
     },
     {
       "id": 12,
@@ -97,7 +109,8 @@
       "name": "Jesse",
       "surname": "Pinkeman",
       "image": "/src/assets/images/Student12.jpg",
-      "advisorId": 5
+      "advisorId": 5,
+      "courses": ["Math","Geomancy"]
     },
     {
       "id": 13,
@@ -105,7 +118,8 @@
       "name": "P'To",
       "surname": "Sillyfool",
       "image": "/src/assets/images/Student13.jpg",
-      "advisorId": 5
+      "advisorId": 5,
+      "courses": ["Math","Geomancy"]
     },
     {
       "id": 14,
@@ -113,7 +127,8 @@
       "name": "Vin",
       "surname": "Diesel",
       "image": "/src/assets/images/Student23.jpg",
-      "advisorId": 2
+      "advisorId": 2,
+      "courses": ["Math","Geomancy"]
     },
     {
       "id": 15,
@@ -121,7 +136,8 @@
       "name": "Jesus",
       "surname": "Christ",
       "image": "/src/assets/images/Student17.jpg",
-      "advisorId": 5
+      "advisorId": 5,
+      "courses": ["Math","Geomancy"]
     }
 
   ],

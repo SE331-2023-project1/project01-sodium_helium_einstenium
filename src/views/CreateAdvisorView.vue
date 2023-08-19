@@ -2,6 +2,7 @@
 import AdvisorCreateForm from '@/components/AdvisorCreateForm.vue'
 import type { AdvisorInfo } from '@/info';
 import { useAdvisorStore } from '@/stores/advisor';
+import { useMessageStore } from '@/stores/message';
 import type { PropType } from 'vue'
 import { useRouter } from 'vue-router';
 const router = useRouter();
@@ -12,10 +13,15 @@ const props = defineProps({
     }
 })
 const store = useAdvisorStore();
+const messageStore = useMessageStore()
 function createAdvisor(advisor: AdvisorInfo){
     console.log("Before add advisor" + advisor.name)
     store.addAdvisor(advisor)
-    router.push({ name: 'advisor-list', params: { id: props.advisor?.id}})
+    messageStore.updateMessage('you are cookie pudๆ'+ props.advisor?.name)
+    setTimeout(() => {
+      messageStore.resetMessage()
+    }, 3000)
+    router.push({ name: 'advisor-list'})
 }
 </script>
 <template>

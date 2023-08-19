@@ -4,9 +4,10 @@ import StudentCommentForm from '@/components/StudentCommentForm.vue';
 import { useCommentStore } from '@/stores/comment';
 import type { CommentInfo, StudentInfo } from '@/info';
 import { useRouter } from 'vue-router';
+import { useMessageStore } from '@/stores/message';
   
 const router = useRouter()
-
+const messageStore = useMessageStore()
  const props = defineProps({
     student: {
       type: Object as PropType<StudentInfo>,
@@ -18,6 +19,10 @@ const router = useRouter()
   const store = useCommentStore();
   function addComment(comment:CommentInfo) {
     store.addComment(comment);
+    messageStore.updateMessage('you are monke'+ props.student?.name)
+    setTimeout(() => {
+      messageStore.resetMessage()
+    }, 3000)
     router.push({name: 'student-detail', params: {id: props.student?.id}});
   }
   

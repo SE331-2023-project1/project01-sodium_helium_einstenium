@@ -4,6 +4,7 @@ import type { PropType } from 'vue'
 import StudentAddDataForm from '@/components/StudentAddDataForm.vue'
 import { useStudentStore } from '@/stores/student';
 import { useRouter } from 'vue-router';
+import { useMessageStore } from '@/stores/message';
 const router = useRouter()
 const props = defineProps({
     student: {
@@ -18,11 +19,15 @@ const props = defineProps({
     
 })
 const store = useStudentStore()
-
+const messageStore = useMessageStore()
 function addStudentDataBtn(studentData: StudentInfo){
    console.log( studentData.id)
    store.addStudentData(studentData)
    console.log('After Add Btn ' + studentData.id)
+   messageStore.updateMessage('you are kruBa'+  props.student?.name)
+    setTimeout(() => {
+      messageStore.resetMessage()
+    }, 3000)
    router.push({name: 'student-detail', params: {id: props.student?.id}});
 }
 </script>

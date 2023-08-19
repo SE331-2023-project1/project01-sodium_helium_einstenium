@@ -32,6 +32,9 @@ console.log(studentsAdd)
    <div class="student-info">
     <span> {{ student.studentID }}</span>
     <p>{{ student.name }}  {{ student.surname }}</p>
+    <ul v-for="course in student.courses">
+    <li>{{ course }}</li>
+    </ul>
    <RouterLink :to="{ name: 'advisor-detail', params:{ id: advisor?.id } }">{{ advisor?.name }}  {{ advisor?.surname }}</RouterLink>
    </div>
    <StudentAddDataList v-if="studentsAdd.length" :studentsAdd="studentsAdd"></StudentAddDataList>
