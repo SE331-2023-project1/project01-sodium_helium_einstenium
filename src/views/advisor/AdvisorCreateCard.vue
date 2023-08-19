@@ -9,9 +9,7 @@ defineProps({
     required: true
   }
 })
-
 </script>
-
 <template>
   <div class="advisor-card">
     <RouterLink v-if="createAdvisor" class="advisor-link" :to="{ name: 'advisor-create-detail', params: {id: createAdvisor.id}}">

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mergeProps, type PropType } from 'vue';
+import type { PropType } from 'vue';
 import StudentCommentForm from '@/components/StudentCommentForm.vue';
 import { useCommentStore } from '@/stores/comment';
 import type { CommentInfo, StudentInfo } from '@/info';
