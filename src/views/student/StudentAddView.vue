@@ -3,7 +3,9 @@ import type { AdvisorInfo, StudentInfo } from '@/info'
 import type { PropType } from 'vue'
 import StudentAddDataForm from '@/components/StudentAddDataForm.vue'
 import { useStudentStore } from '@/stores/student';
-defineProps({
+import { useRouter } from 'vue-router';
+const router = useRouter()
+const props = defineProps({
     student: {
         type: Object as PropType<StudentInfo>,
         require: true
@@ -21,6 +23,7 @@ function addStudentDataBtn(studentData: StudentInfo){
    console.log( studentData.id)
    store.addStudentData(studentData)
    console.log('After Add Btn ' + studentData.id)
+   router.push({name: 'student-detail', params: {id: props.student?.id}});
 }
 </script>
 <template>
