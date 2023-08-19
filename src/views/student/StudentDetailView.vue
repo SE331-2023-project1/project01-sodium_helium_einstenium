@@ -32,7 +32,7 @@ console.log(studentsAdd)
    <div class="student-info">
     <span> {{ student.studentID }}</span>
     <p>{{ student.name }}  {{ student.surname }}</p>
-    <ul v-for="course in student.courses">
+    <ul v-for="course in student.courses" :key="course">
     <li>{{ course }}</li>
     </ul>
    <RouterLink :to="{ name: 'advisor-detail', params:{ id: advisor?.id } }">{{ advisor?.name }}  {{ advisor?.surname }}</RouterLink>
