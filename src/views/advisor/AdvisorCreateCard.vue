@@ -16,7 +16,6 @@ defineProps({
     <p> Name: {{createAdvisor.name }}  {{ createAdvisor.surname}}</p>
     </RouterLink>
   </div>
-
 </template>
 <style scoped>
 .advisor-card {

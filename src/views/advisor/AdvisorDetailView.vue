@@ -7,10 +7,6 @@ import AdvisorDetail from '@/components/AdvisorDetail.vue';
     type: Object as PropType<AdvisorInfo>,
     required: true
   },
-  createAdvisor: {
-    type: Object as PropType<AdvisorInfo>,
-  },
-  id : String,
 })
 </script>
 <template>

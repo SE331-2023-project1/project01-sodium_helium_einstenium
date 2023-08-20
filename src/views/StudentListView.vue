@@ -10,25 +10,28 @@ const props = defineProps({
   page: {
     type: Number,
     required: true
+  },
+  perPage: {
+    type: Number,
+    required: true
   }
 })
-const perPage = ref<number>(5)
+
 
 const students: Ref<Array<StudentInfo>> = ref([])
-StudentService.getStudent(perPage.value, props.page).then((response) => {
+StudentService.getStudent(props.perPage, props.page).then((response) => {
   students.value = response.data
   totalEvent.value = response.headers['x-total-count']
 })
 
 const hasNextPage = computed(() => {
-  //first calculate the total page
-  const totalPages = Math.ceil(totalEvent.value / perPage.value)
+  const totalPages = Math.ceil(totalEvent.value / props.perPage)
   return props.page.valueOf() < totalPages
 })
 onBeforeRouteUpdate((to, from, next) => {
   const toPage = Number(to.query.page)
 
-  StudentService.getStudent(5, toPage).then((response) => {
+  StudentService.getStudent(props.perPage, toPage).then((response) => {
     students.value = response.data
     totalEvent.value  = response.headers['x-total-count']
     next()
@@ -44,17 +47,18 @@ onBeforeRouteUpdate((to, from, next) => {
   <main>
     <div class="student">
       <StudentCard v-for="student in students" :key="student.id" :student="student"></StudentCard>
-    </div>
+   
     <div class="pagination">
       <RouterLink :to="{ name: 'student-list', query: { page: page - 1 } }" rel="prev" v-if="page != 1"
-        >Prev Page</RouterLink
+        id="page-prev">Prev Page</RouterLink
       >
       <RouterLink
         :to="{ name: 'student-list', query: { page: page + 1 } }"
         rel="next"
         v-if="hasNextPage"
-        >Next Page</RouterLink
-      >
+       id="page-next" >Next Page</RouterLink
+      > 
+    </div>
     </div>
   </main>
 </template>
@@ -81,4 +85,3 @@ onBeforeRouteUpdate((to, from, next) => {
   align-items: center;
 }
 </style>
-@/services/StudentService

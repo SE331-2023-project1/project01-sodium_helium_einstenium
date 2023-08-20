@@ -21,12 +21,15 @@ const router = createRouter({
       path: '/',
       name: 'student-list',
       component: StudentListView,
-      props: (route) => ({page: parseInt(route.query?.page as string || '1') })
+      props: (route) => ({
+        page: parseInt(route.query?.page as string || '1'),
+        perPage: parseInt(route.query?.perPage as string || '5') 
+      }),
     },
     {
       path: '/advisor',
       name: 'advisor-list',
-      component: AdvisorListView
+      component: AdvisorListView,
     },
     {
       path: '/create-advisor',
