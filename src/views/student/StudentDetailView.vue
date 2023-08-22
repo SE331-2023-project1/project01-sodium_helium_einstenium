@@ -29,13 +29,13 @@ console.log(studentsAdd)
     <div class="image-container">
         <img class="image" :src="student.image">
     </div>
-   <div class="student-info">
-    <span> {{ student.studentID }}</span>
+   <div class="student-info py-4">
+    <span class="text-lg"> {{ student.studentID }}</span>
     <p>{{ student.name }}  {{ student.surname }}</p>
-    <ul v-for="course in student.courses" :key="course">
+    <ul v-for="course in student.courses" :key="course" class="text-gray-600">
     <li>{{ course }}</li>
     </ul>
-   <RouterLink :to="{ name: 'advisor-detail', params:{ id: advisor?.id } }">{{ advisor?.name }}  {{ advisor?.surname }}</RouterLink>
+   <RouterLink :to="{ name: 'advisor-detail', params:{ id: advisor?.id } }" class="text-blue-600 hover:underline mt-2">{{ advisor?.name }}  {{ advisor?.surname }}</RouterLink>
    </div>
    <StudentAddDataList v-if="studentsAdd.length" :studentsAdd="studentsAdd"></StudentAddDataList>
 

@@ -45,17 +45,21 @@ onBeforeRouteUpdate((to, from, next) => {
 
 <template>
   <main>
-    <div class="student">
+
+    <div class="container mx-auto py-8">
+      <div class="student">
       <StudentCard v-for="student in students" :key="student.id" :student="student"></StudentCard>
+    </div>
    
     <div class="pagination">
-      <RouterLink :to="{ name: 'student-list', query: { page: page - 1 } }" rel="prev" v-if="page != 1"
+      <RouterLink :to="{ name: 'student-list', query: { page: page - 1 } }" rel="prev" v-if="page != 1" class="text-gray-600 hover:text-gray-800"
         id="page-prev">Prev Page</RouterLink
       >
       <RouterLink
         :to="{ name: 'student-list', query: { page: page + 1 } }"
         rel="next"
         v-if="hasNextPage"
+        class="text-gray-600 hover:text-gray-800"
        id="page-next" >Next Page</RouterLink
       > 
     </div>

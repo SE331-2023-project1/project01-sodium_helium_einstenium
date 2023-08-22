@@ -12,15 +12,15 @@ const advisor = storeToRefs(advisorStore).advisor
 const id = ref(student.value?.id)
 </script>
 <template>
-    <div v-if="student">
-       
-       <div id="nav">
-        <router-link :to="{ name: 'student-detail', params:{id}}">Student Detail | </router-link>
-        <router-link :to="{ name: 'student-add',params:{id}}">Add Student Data | </router-link>
-        <router-link :to="{ name: 'student-comment',params:{id}}">Add Comment |</router-link>
-
+    <div v-if="student" class="min-h-screen bg-gray-100">
+       <div class="bg-white shadow-md">
+            <div class="container mx-auto py-4 flex justify-center items-center">
+                <router-link :to="{ name: 'student-detail' , params: { id }}" class="text-gray-400 hover:text-gray-900 mx-4 font-semibold">Student Detail</router-link>
+                <router-link :to="{ name: 'student-add' , params: { id }}" class="text-gray-400 hover:text-gray-900 mx-4 font-semibold">Add Student Data</router-link>
+                <router-link :to="{ name: 'student-comment' , params: { id }}" class="text-gray-400 hover:text-gray-900 mx-4 font-semibold">Add Comment</router-link>
+            </div>
        </div>
-       <RouterView :student="student" :advisor="advisor" ></RouterView>
+       <router-view :student="student" :advisor="advisor"></router-view>
     </div>
 </template>
 <style scoped>

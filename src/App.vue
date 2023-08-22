@@ -7,14 +7,14 @@ const {message} = storeToRefs(store)
 </script>
 
 <template>
-  <header>
-    <div id="flashMessage" v-if="message">
-    <h4>{{ message }}</h4>
+  <header class="bg-gray-100 py-">
+    <div id="flashMessage" v-if="message" class="bg-yellow-200 animate-yellowfade p-2">
+    <h4 class="text-yellow-800">{{ message }}</h4>
     </div>
-    <nav>
-      <RouterLink :to="{name: 'student-list'}">Students</RouterLink>
-      <RouterLink :to="{name: 'advisor-list'}">Advisors</RouterLink>
-      <RouterLink :to="{name: 'create-advisor'}">Create Advisors</RouterLink>
+    <nav class="flex justify-center space-x-4 p-4">
+      <RouterLink :to="{name: 'student-list'}" class="text-blue-600 hover:text-blue-800 text-lg font-bold"> Students </RouterLink>
+      <RouterLink :to="{name: 'advisor-list'}" class="text-blue-600 hover:text-blue-800 text-lg font-bold"> Advisors </RouterLink>
+      <RouterLink :to="{name: 'create-advisor'}" class="text-blue-600 hover:text-blue-800 text-lg font-bold"> Create Advisors </RouterLink>
     </nav>
   </header>
 
