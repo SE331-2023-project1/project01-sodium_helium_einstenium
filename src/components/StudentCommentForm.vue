@@ -40,22 +40,22 @@ function onSubmit() {
       <div>
         <label for="comment">Add Comment</label>
         <br>
-        <input id="comment" v-model="form.comment">
+        <textarea class="text-black" id="comment" v-model="form.comment"></textarea>
       </div>
       <div>
         <label for="date">Date:</label>
         <br>
-        <input id="date" v-model="form.date" />
+        <input class="text-black" id="date" v-model="form.date" />
       </div>
       <div>
         <label for="professor_name">Professor Name: </label>
         <br>
-        <input id="professor_name" v-model="form.professor_name" />
+        <input class="text-black" id="professor_name" v-model="form.professor_name" />
       </div>
       <input
-        class="button border-2 bg-green-200 text-slate-950 rounded-full mt-5"
+        class="mt-5 text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
         type="submit"
-        value="Submit"
+        value="Add Comment"
       />
     </div>
   </form>

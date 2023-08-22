@@ -23,7 +23,8 @@ const createAdvisor = computed(() => advisorStore.getCreatedAdvisorById(advisorI
 <style scoped>
 
 .image {
-    max-width: 150px;
+  width: 300px;
+    height: 200px;
 }
 
 .advisor-created-detail {

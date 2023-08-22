@@ -24,7 +24,8 @@ defineProps({
 <style scoped>
 
 .image {
-    max-width: 150px;
+    width: 300px;
+    height: 200px;
 }
 
 .advisor-detail {

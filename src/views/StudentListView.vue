@@ -45,26 +45,57 @@ onBeforeRouteUpdate((to, from, next) => {
 <template>
   <main>
     <div class="flex flex-col items-center">
-      <div class="grid grid-cols-3 gap-4 mt-40">
+      <div class="grid grid-cols-3 gap-4 mt-32">
         <StudentCard v-for="student in students" :key="student.id" :student="student"></StudentCard>
       </div>
 
       <div class="flex space-x-72">
-        <div class="">
-        <RouterLink
-          :to="{ name: 'student-list', query: { page: page - 1 } }"
-          rel="prev"
+        <div
           v-if="page != 1"
-          class="text-gray-600 hover:text-gray-800 border-2 bg-red-200 border-gray-500 rounded-full text-center"
-          >Prev Page</RouterLink
-        ></div>
-        <div><RouterLink
-          :to="{ name: 'student-list', query: { page: page + 1 } }"
-          rel="next"
+          class="flex items-center justify-center px-4 h-10 text-base font-medium text-white bg-gray-800 rounded-l hover:bg-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+        >
+          <svg
+            class="w-3.5 h-3.5 mr-2"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M13 5H1m0 0 4 4M1 5l4-4"
+            />
+          </svg>
+          <RouterLink :to="{ name: 'student-list', query: { page: page - 1 } }" rel="prev"
+            >Prev Page</RouterLink
+          >
+        </div>
+        <div
           v-if="hasNextPage"
-          class="text-gray-600 hover:text-gray-800 border-2 bg-green-200 border-gray-500 rounded-full text-center"
-          >Next Page</RouterLink
-        ></div>
+          class="flex items-center justify-center px-4 h-10 text-base font-medium text-white bg-gray-800 border-0 border-l border-gray-700 rounded-r hover:bg-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+        >
+          <RouterLink :to="{ name: 'student-list', query: { page: page + 1 } }" rel="next"
+            >Next Page</RouterLink
+          >
+          <svg
+            class="w-3.5 h-3.5 ml-2"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"
+            />
+          </svg>
+        </div>
       </div>
     </div>
   </main>

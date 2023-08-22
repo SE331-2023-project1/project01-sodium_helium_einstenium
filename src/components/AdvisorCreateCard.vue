@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { RouterLink } from 'vue-router';
+import { RouterLink } from 'vue-router'
 import type { AdvisorInfo } from '@/info'
 import type { PropType } from 'vue'
 
@@ -11,16 +11,23 @@ defineProps({
 })
 </script>
 <template>
-  <div class="advisor-card">
-    <RouterLink v-if="createAdvisor" class="advisor-link" :to="{ name: 'advisor-create-detail', params: {id: createAdvisor.id}}">
-    <p> Name: {{createAdvisor.name }}  {{ createAdvisor.surname}}</p>
-    </RouterLink>
-  </div>
+  <RouterLink
+    v-if="createAdvisor"
+    class="advisor-link"
+    :to="{ name: 'advisor-create-detail', params: { id: createAdvisor.id } }"
+  >
+    <div class="advisor-card">
+      <div class="text-center mt-24">
+        <p>Name: {{ createAdvisor.name }} {{ createAdvisor.surname }}</p>
+      </div>
+    </div>
+  </RouterLink>
 </template>
 <style scoped>
 .advisor-card {
   padding: 20px;
   width: 250px;
+  height: 250px;
   cursor: pointer;
   border: solid 1px black;
   margin-bottom: 18px;
