@@ -18,33 +18,13 @@ const createAdvisors = computed(() => advisorStore.getCreatedAdvisor())
 
 <template>
   <main>
-    <div class="advisor">
+    <div class="flex flex-col items-center">
+      <div class="grid grid-cols-3 gap-4">
       <AdvisorCard v-for="advisor in advisors" :key="advisor.id" :advisor="advisor"></AdvisorCard>
       <AdvisorCreateCard v-for="createAdvisor in createAdvisors" :key="createAdvisor.id" :createAdvisor="createAdvisor"></AdvisorCreateCard>
     </div>
   
+    </div>
+  
   </main>
 </template>
-<style scoped>
-.advisor {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.pagination {
-  display: flex;
-  width: 290px;
-}
-.pagination a {
-  flex: 1;
-  text-decoration: none;
-  color: #2c3e50;
-}
-#page-prev {
-  text-align: left;
-}
-
-#page-next {
-  text-align: right;
-}
-</style>

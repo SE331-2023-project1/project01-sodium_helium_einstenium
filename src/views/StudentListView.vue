@@ -44,7 +44,8 @@ onBeforeRouteUpdate((to, from, next) => {
 
 <template>
   <main>
-      <div class="grid grid-cols-3 gap-3 mb-4 mt-10">
+    <div class="flex flex-col items-center">
+      <div class="grid grid-cols-3 gap-4">
         <StudentCard v-for="student in students" :key="student.id" :student="student"></StudentCard>
       </div>
 
@@ -53,7 +54,7 @@ onBeforeRouteUpdate((to, from, next) => {
           :to="{ name: 'student-list', query: { page: page - 1 } }"
           rel="prev"
           v-if="page != 1"
-          class="text-orange-600 hover:orange-gray-800"
+          class="text-orange-600 hover:text-orange-800"
           id="page-prev"
           >Prev Page</RouterLink
         >
@@ -66,24 +67,12 @@ onBeforeRouteUpdate((to, from, next) => {
           >Next Page</RouterLink
         >
       </div>
+    </div>
   </main>
 </template>
 <style scoped>
 .pagination {
   display: flex;
   width: 290px;
-}
-
-#page-prev {
-  text-align: left;
-}
-
-#page-next {
-  text-align: right;
-}
-.student {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 </style>

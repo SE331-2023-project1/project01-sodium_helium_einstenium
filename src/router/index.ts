@@ -23,7 +23,7 @@ const router = createRouter({
       component: StudentListView,
       props: (route) => ({
         page: parseInt(route.query?.page as string || '1'),
-        perPage: parseInt(route.query?.perPage as string || '5') 
+        perPage: parseInt(route.query?.perPage as string || '3') 
       }),
     },
     {
