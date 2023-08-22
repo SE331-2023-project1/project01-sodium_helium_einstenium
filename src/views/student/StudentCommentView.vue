@@ -28,7 +28,7 @@ const messageStore = useMessageStore()
   
   </script>
   <template>
-    <div>
+    <div class="flex flex-col items-center">
       <p>Make the comment here</p>
 
       <div v-if="student">

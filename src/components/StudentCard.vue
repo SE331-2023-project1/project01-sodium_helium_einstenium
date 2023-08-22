@@ -10,18 +10,22 @@ defineProps({
 </script>
 
 <template>
+   <RouterLink class="student-link" :to="{ name: 'student-detail', params: {id: student?.id}}">
   <div class="student-card">
+    <div class="text-center mt-20">
     <span> Student ID: {{ student.studentID }}</span>
-    <RouterLink class="student-link" :to="{ name: 'student-detail', params: {id: student?.id}}">
     <p> Name: {{ student.name }}  {{ student.surname }}</p>
-    </RouterLink>
   </div>
+  </div>
+</RouterLink>
 </template>
+
 
 <style scoped>
 .student-card {
   padding: 20px;
   width: 250px;
+  height: 250px;
   cursor: pointer;
   border: solid 1px black;
   margin-bottom: 18px;

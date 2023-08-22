@@ -34,7 +34,8 @@ const createAdvisor = {
 </script>
 <template>
     <form class="create-advisor" @submit.prevent="onSubmit">
-     <label for="id">Professor Id: </label>
+     <div class="flex flex-col items-center">
+    <label for="id">Professor Id: </label>
      <input id="id" type="number" v-model="form.id" >
 
      <label for="name">Professor Name: </label>
@@ -46,6 +47,7 @@ const createAdvisor = {
      <label for="image">Professor Image: </label>
      <input id="image" v-model="form.image">
 
-     <input class="button" type="submit" value="Submit">
+     <input class="button border-2 bg-green-200 text-slate-950 rounded-full mt-5" type="submit" value="Submit">
+    </div>
     </form>
 </template>

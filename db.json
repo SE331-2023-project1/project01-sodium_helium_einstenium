@@ -138,6 +138,33 @@
       "image": "/src/assets/images/Student17.jpg",
       "advisorId": 5,
       "courses": ["Math","Geomancy"]
+    },
+    {
+      "id": 16,
+      "studentID":"SE-015",
+      "name": "Liu",
+      "surname": "Kang",
+      "image": "/src/assets/images/Student18.jpg",
+      "advisorId": 5,
+      "courses": ["Math","Geomancy"]
+    },
+    {
+      "id": 17,
+      "studentID":"SE-016",
+      "name": "John",
+      "surname": "Kratos",
+      "image": "/src/assets/images/Student20.jpg",
+      "advisorId": 5,
+      "courses": ["Math","Geomancy"]
+    },
+    {
+      "id": 18,
+      "studentID":"SE-017",
+      "name": "Ching-Cheng",
+      "surname": "Hanji",
+      "image": "/src/assets/images/Student21.jpg",
+      "advisorId": 5,
+      "courses": ["Math","Geomancy"]
     }
 
   ],

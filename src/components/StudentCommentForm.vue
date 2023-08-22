@@ -2,7 +2,6 @@
 import type { StudentInfo } from '@/info'
 import { reactive, type PropType } from 'vue'
 
-
 const { student } = defineProps({
   student: {
     type: Object as PropType<StudentInfo>,
@@ -33,24 +32,31 @@ function onSubmit() {
   form.comment = ''
   form.date = ''
   form.professor_name = ''
-
-  
 }
 </script>
 <template>
   <form class="comment-form" @submit.prevent="onSubmit">
-    <div>
-      <label for="comment">Add Comment</label>
-      <textarea id="comment" v-model="form.comment"></textarea>
+    <div class="flex flex-col items-center">
+      <div>
+        <label for="comment">Add Comment</label>
+        <br>
+        <input id="comment" v-model="form.comment">
+      </div>
+      <div>
+        <label for="date">Date:</label>
+        <br>
+        <input id="date" v-model="form.date" />
+      </div>
+      <div>
+        <label for="professor_name">Professor Name: </label>
+        <br>
+        <input id="professor_name" v-model="form.professor_name" />
+      </div>
+      <input
+        class="button border-2 bg-green-200 text-slate-950 rounded-full mt-5"
+        type="submit"
+        value="Submit"
+      />
     </div>
-    <div>
-      <label for="date">Date:</label>
-      <input id="date" v-model="form.date" />
-    </div>
-    <div>
-      <label for="professor_name">Professor Name: </label>
-      <input id="professor_name" v-model="form.professor_name" />
-    </div>
-    <input class="button" type="submit" value="Submit" />
   </form>
 </template>
