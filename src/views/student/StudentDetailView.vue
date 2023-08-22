@@ -52,4 +52,6 @@ console.log(studentsAdd)
    flex-direction: column;
    align-items: center;
 }
+
 </style>@/stores/student
+

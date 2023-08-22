@@ -17,7 +17,6 @@ const props = defineProps({
   }
 })
 
-
 const students: Ref<Array<StudentInfo>> = ref([])
 StudentService.getStudent(props.perPage, props.page).then((response) => {
   students.value = response.data
@@ -31,39 +30,42 @@ const hasNextPage = computed(() => {
 onBeforeRouteUpdate((to, from, next) => {
   const toPage = Number(to.query.page)
 
-  StudentService.getStudent(props.perPage, toPage).then((response) => {
-    students.value = response.data
-    totalEvent.value  = response.headers['x-total-count']
-    next()
-  }).catch((error) => {
-    console.log(error)
-  })
+  StudentService.getStudent(props.perPage, toPage)
+    .then((response) => {
+      students.value = response.data
+      totalEvent.value = response.headers['x-total-count']
+      next()
+    })
+    .catch((error) => {
+      console.log(error)
+    })
 })
-
-
 </script>
 
 <template>
   <main>
+      <div class="grid grid-cols-3 gap-3 mb-4 mt-10">
+        <StudentCard v-for="student in students" :key="student.id" :student="student"></StudentCard>
+      </div>
 
-    <div class="container mx-auto py-8">
-      <div class="student">
-      <StudentCard v-for="student in students" :key="student.id" :student="student"></StudentCard>
-    </div>
-   
-    <div class="pagination">
-      <RouterLink :to="{ name: 'student-list', query: { page: page - 1 } }" rel="prev" v-if="page != 1" class="text-gray-600 hover:text-gray-800"
-        id="page-prev">Prev Page</RouterLink
-      >
-      <RouterLink
-        :to="{ name: 'student-list', query: { page: page + 1 } }"
-        rel="next"
-        v-if="hasNextPage"
-        class="text-gray-600 hover:text-gray-800"
-       id="page-next" >Next Page</RouterLink
-      > 
-    </div>
-    </div>
+      <div class="pagination">
+        <RouterLink
+          :to="{ name: 'student-list', query: { page: page - 1 } }"
+          rel="prev"
+          v-if="page != 1"
+          class="text-orange-600 hover:orange-gray-800"
+          id="page-prev"
+          >Prev Page</RouterLink
+        >
+        <RouterLink
+          :to="{ name: 'student-list', query: { page: page + 1 } }"
+          rel="next"
+          v-if="hasNextPage"
+          class="text-orange-600 hover:text-orange-800"
+          id="page-next"
+          >Next Page</RouterLink
+        >
+      </div>
   </main>
 </template>
 <style scoped>
@@ -71,11 +73,7 @@ onBeforeRouteUpdate((to, from, next) => {
   display: flex;
   width: 290px;
 }
-.pagination a {
-  flex: 1;
-  text-decoration: none;
-  color: #2c3e50;
-}
+
 #page-prev {
   text-align: left;
 }
