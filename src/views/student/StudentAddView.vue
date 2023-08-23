@@ -32,7 +32,7 @@ function addStudentDataBtn(studentData: StudentInfo){
 }
 </script>
 <template>
-    <div v-if="student">
+    <div v-if="student" class="mt-5">
         <StudentAddDataForm :student="student" @student-submitted="addStudentDataBtn"></StudentAddDataForm>
     </div>
     

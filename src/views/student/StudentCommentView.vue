@@ -28,9 +28,7 @@ const messageStore = useMessageStore()
   
   </script>
   <template>
-    <div class="flex flex-col items-center">
-      <p>Make the comment here</p>
-
+    <div class="flex flex-col items-center mt-5">
       <div v-if="student">
         <StudentCommentForm :student="student" @comment-submitted="addComment"></StudentCommentForm>
       </div>

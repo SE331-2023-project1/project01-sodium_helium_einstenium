@@ -14,7 +14,7 @@ defineProps({
         <div class="image-container">
             <img class="image" :src="advisor.image">
         </div>
-        <div class="advisor-info">
+        <div class="advisor-info mt-5">
             <p>Name: {{ advisor.name }}</p>
             <p>Surname: {{ advisor.surname }}</p>
         </div>

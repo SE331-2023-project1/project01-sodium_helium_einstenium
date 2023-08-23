@@ -10,6 +10,8 @@ import AdvisorDetail from '@/components/AdvisorDetail.vue';
 })
 </script>
 <template>
+  <div class="mt-5">
    <AdvisorDetail v-if="advisor" :advisor="advisor"></AdvisorDetail>
+  </div>
 </template>
 
