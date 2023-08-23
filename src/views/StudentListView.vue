@@ -44,7 +44,7 @@ onBeforeRouteUpdate((to, from, next) => {
 
 <template>
   <main>
-    <div class="flex flex-col items-center">
+    <div class=" flex flex-col items-center">
       <div class="grid grid-cols-3 gap-4 mt-32">
         <StudentCard v-for="student in students" :key="student.id" :student="student"></StudentCard>
       </div>
@@ -100,9 +100,3 @@ onBeforeRouteUpdate((to, from, next) => {
     </div>
   </main>
 </template>
-<style scoped>
-.pagination {
-  display: flex;
-  width: 290px;
-}
-</style>

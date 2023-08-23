@@ -17,7 +17,7 @@ defineProps({
     :to="{ name: 'advisor-create-detail', params: { id: createAdvisor.id } }"
   >
     <div class="advisor-card">
-      <div class="text-center mt-24">
+      <div class="hover:animate-bounce text-center mt-24">
         <p>Name: {{ createAdvisor.name }} {{ createAdvisor.surname }}</p>
       </div>
     </div>

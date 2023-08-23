@@ -11,7 +11,7 @@ defineProps({
 
 <template>
    <RouterLink class="student-link" :to="{ name: 'student-detail', params: {id: student?.id}}">
-  <div class="student-card">
+  <div class="hover:animate-bounce student-card">
     <div class="text-center mt-20">
     <span> Student ID: {{ student.studentID }}</span>
     <p> Name: {{ student.name }}  {{ student.surname }}</p>

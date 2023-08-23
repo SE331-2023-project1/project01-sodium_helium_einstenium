@@ -7,7 +7,7 @@ const {message} = storeToRefs(store)
 </script>
 
 <template>
-  <header class="bg-black-100 py-">
+  <header class="bg-black-100 py-2">
     <div id="flashMessage" v-if="message" class="bg-yellow-200 animate-yellowfade p-2">
     <h4 class="text-yellow-800">{{ message }}</h4>
     </div>
@@ -17,15 +17,17 @@ const {message} = storeToRefs(store)
       <RouterLink :to="{name: 'create-advisor'}" class="text-orange-600 hover:text-orange-800 text-lg font-bold"> Create Advisors </RouterLink>
     </nav>
   </header>
-
   <RouterView />
+  <div class="fixed inset-x-0 bottom-0 h-8 bg-black shadow-inner">
+    <div class="flex items-center justify-center mt-2"><div class="text-orange-600"> © </div>  Copyright 2023 Sodium_Helium_Einstenium. All rights reserved.</div>
+  </div>
 </template>
 
 <style scoped>
 
-@keyframes yellowfade{
+@keyframes orangefade{
   from {
-    background: yellow;
+    background: orange;
   }
   to{
     background: transparent;
@@ -33,7 +35,7 @@ const {message} = storeToRefs(store)
 }
 
 #flashMessage {
-  animation: yellowfade 3s ease-in-out;
+  animation: orangefade 3s ease-in-out;
 }
 
 </style>

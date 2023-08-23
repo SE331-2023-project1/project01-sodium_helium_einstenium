@@ -19,7 +19,7 @@ const messageStore = useMessageStore()
   const store = useCommentStore();
   function addComment(comment:CommentInfo) {
     store.addComment(comment);
-    messageStore.updateMessage('you are monke'+ props.student?.name)
+    messageStore.updateMessage('Successfully added comment in '+ props.student?.name)
     setTimeout(() => {
       messageStore.resetMessage()
     }, 3000)

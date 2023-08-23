@@ -24,7 +24,7 @@ function addStudentDataBtn(studentData: StudentInfo){
    console.log( studentData.id)
    store.addStudentData(studentData)
    console.log('After Add Btn ' + studentData.id)
-   messageStore.updateMessage('you are kruBa'+  props.student?.name)
+   messageStore.updateMessage('Successfully add data in '+  props.student?.name)
     setTimeout(() => {
       messageStore.resetMessage()
     }, 3000)
