@@ -18,5 +18,5 @@
  ---
 
  # URL of the the deployed website
- - N/A
+ - https://se331-project-bf219.web.app/
  ---
