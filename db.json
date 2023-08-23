@@ -17,7 +17,7 @@
       "studentID": "SE-002",
       "name": "Cherprang ",
       "surname": "BNK48",
-      "image": "/src/assets/images/Student22.jpg",
+      "image": "https://storage.cloud.google.com/se331-project/Student22.jpg",
       "advisorId": 6,
       "courses": ["Math","Sexual Health Studies"]
     },
@@ -26,7 +26,7 @@
       "studentID": "SE-003",
       "name": "Nobi",
       "surname": "Nobita",
-      "image": "/src/assets/images/Student6.jpg",
+      "image": "https://storage.cloud.google.com/se331-project/Student6.jpg",
       "advisorId": 1,
       "courses": ["Ethical Hacking","Geomancy"]
 
@@ -36,7 +36,7 @@
       "studentID":"SE-004",
       "name": "Asher",
       "surname": "Barton",
-      "image": "/src/assets/images/Student7.jpg",
+      "image": "https://storage.cloud.google.com/se331-project/Student7.jpg",
       "advisorId": 1,
       "courses": ["Fire Engineering","Geomancy"]
     },
@@ -45,7 +45,7 @@
       "studentID":"SE-005",
       "name": "Ignatius",
       "surname": "Sears",
-      "image": "/src/assets/images/Student8.jpg",
+      "image": "https://storage.cloud.google.com/se331-project/Student8.jpg",
       "advisorId": 4,
       "courses": ["Math","Dairy Herd Management"]
     },
@@ -54,7 +54,7 @@
       "studentID":"SE-006",
       "name": "Rebecca",
       "surname": "Gordon",
-      "image": "/src/assets/images/Student3.png",
+      "image": "https://storage.cloud.google.com/se331-project/Student24.jpg",
       "advisorId": 2,
       "courses": ["Math","Surf Science"]
     },
@@ -63,7 +63,7 @@
       "studentID":"SE-007",
       "name": "Upton",
       "surname": "Glover",
-      "image": "/src/assets/images/Student4.jpg",
+      "image": "https://storage.cloud.google.com/se331-project/Student4.jpg",
       "advisorId": 3,
       "courses": ["Math","Lady Gaga and the Sociology of Fame"]
     },
@@ -72,7 +72,7 @@
       "studentID":"SE-008",
       "name": "Macon",
       "surname": "Albert",
-      "image": "/src/assets/images/Student5.jpg",
+      "image": "https://storage.cloud.google.com/se331-project/Student5.jpg",
       "advisorId": 3,
       "courses": ["Math","Geomancy"]
     },
@@ -81,7 +81,7 @@
       "studentID":"SE-009",
       "name": "Kru",
       "surname": "Kaikaew",
-      "image": "/src/assets/images/Student9.jpg",
+      "image": "https://storage.cloud.google.com/se331-project/Student9.jpg",
       "advisorId": 2,
       "courses": ["Classic Sanskrit","Defense Against the Dark Arts"]
     },
@@ -90,7 +90,7 @@
       "studentID":"SE-010",
       "name": "Robert",
       "surname": "Oppenheimer",
-      "image": "/src/assets/images/Student27.jpg",
+      "image": "https://storage.cloud.google.com/se331-project/Student27.jpg",
       "advisorId": 2,
       "courses": ["chemistry-physics","nuclear"]
     },
@@ -99,7 +99,7 @@
       "studentID":"SE-011",
       "name": "Walter",
       "surname": "White",
-      "image": "/src/assets/images/Student26.jpg",
+      "image": "https://storage.cloud.google.com/se331-project/Student26.jpg",
       "advisorId": 5,
       "courses": ["chemistry","crystal meth"]
     },
@@ -108,7 +108,7 @@
       "studentID":"SE-012",
       "name": "Jesse",
       "surname": "Pinkeman",
-      "image": "/src/assets/images/Student12.jpg",
+      "image": "https://storage.cloud.google.com/se331-project/Student22.jpg",
       "advisorId": 5,
       "courses": ["chemistry","crystal meth"]
     },
@@ -117,7 +117,7 @@
       "studentID":"SE-013",
       "name": "P'To",
       "surname": "Sillyfool",
-      "image": "/src/assets/images/Student13.jpg",
+      "image": "https://storage.cloud.google.com/se331-project/Student13.jpg",
       "advisorId": 5,
       "courses": ["dancing","Sexual Health Studies"]
     },
@@ -126,7 +126,7 @@
       "studentID":"SE-014",
       "name": "Vin",
       "surname": "Diesel",
-      "image": "/src/assets/images/Student23.jpg",
+      "image": "https://storage.cloud.google.com/se331-project/Student23.jpg",
       "advisorId": 2,
       "courses": ["Mechanical engineering","family"]
     },
@@ -135,7 +135,7 @@
       "studentID":"SE-666",
       "name": "Jesus",
       "surname": "Christ",
-      "image": "/src/assets/images/Student17.jpg",
+      "image": "https://storage.cloud.google.com/se331-project/Student17.jpg",
       "advisorId": 6,
       "courses": ["Defense Against the Dark Arts","Buddhism"]
     },
@@ -144,7 +144,7 @@
       "studentID":"SE-015",
       "name": "Liu",
       "surname": "Kang",
-      "image": "/src/assets/images/Student18.jpg",
+      "image": "https://storage.cloud.google.com/se331-project/Student18.jpg",
       "advisorId": 5,
       "courses": ["chinese","Lady Gaga and the Sociology of Fame"]
     },
@@ -153,7 +153,7 @@
       "studentID":"SE-016",
       "name": "John",
       "surname": "Kratos",
-      "image": "/src/assets/images/Student20.jpg",
+      "image": "https://storage.cloud.google.com/se331-project/Student20.jpg",
       "advisorId": 6,
       "courses": ["mythology","Geomancy"]
     },
@@ -162,7 +162,7 @@
       "studentID":"SE-017",
       "name": "Ching-Cheng",
       "surname": "Hanji",
-      "image": "/src/assets/images/Student21.jpg",
+      "image": "https://storage.cloud.google.com/se331-project/Student21.jpg",
       "advisorId": 5,
       "courses": ["dancing","singing"]
     }
