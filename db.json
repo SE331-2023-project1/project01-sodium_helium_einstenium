@@ -8,7 +8,7 @@
       "surname": "Suksawat",
       "image": "/src/assets/images/Student1.JPG",
       "advisorId": 3,
-      "courses": ["Math","Geomancy"]
+      "courses": ["Math","Ethnobotany"]
 
     },
 
@@ -18,8 +18,8 @@
       "name": "Cherprang ",
       "surname": "BNK48",
       "image": "/src/assets/images/Student22.jpg",
-      "advisorId": 4,
-      "courses": ["Math","Geomancy"]
+      "advisorId": 6,
+      "courses": ["Math","Sexual Health Studies"]
     },
     {
       "id": 3,
@@ -28,7 +28,7 @@
       "surname": "Nobita",
       "image": "/src/assets/images/Student6.jpg",
       "advisorId": 1,
-      "courses": ["Math","Geomancy"]
+      "courses": ["Ethical Hacking","Geomancy"]
 
     },
     {
@@ -38,7 +38,7 @@
       "surname": "Barton",
       "image": "/src/assets/images/Student7.jpg",
       "advisorId": 1,
-      "courses": ["Math","Geomancy"]
+      "courses": ["Fire Engineering","Geomancy"]
     },
     {
       "id": 5,
@@ -47,7 +47,7 @@
       "surname": "Sears",
       "image": "/src/assets/images/Student8.jpg",
       "advisorId": 4,
-      "courses": ["Math","Geomancy"]
+      "courses": ["Math","Dairy Herd Management"]
     },
     {
       "id": 6,
@@ -56,7 +56,7 @@
       "surname": "Gordon",
       "image": "/src/assets/images/Student3.png",
       "advisorId": 2,
-      "courses": ["Math","Geomancy"]
+      "courses": ["Math","Surf Science"]
     },
     {
       "id": 7,
@@ -65,7 +65,7 @@
       "surname": "Glover",
       "image": "/src/assets/images/Student4.jpg",
       "advisorId": 3,
-      "courses": ["Math","Geomancy"]
+      "courses": ["Math","Lady Gaga and the Sociology of Fame"]
     },
     {
       "id": 8,
@@ -83,25 +83,25 @@
       "surname": "Kaikaew",
       "image": "/src/assets/images/Student9.jpg",
       "advisorId": 2,
-      "courses": ["Math","Geomancy"]
+      "courses": ["Classic Sanskrit","Defense Against the Dark Arts"]
     },
     {
       "id": 10,
       "studentID":"SE-010",
       "name": "Robert",
       "surname": "Oppenheimer",
-      "image": "/src/assets/images/Student10.jpg",
+      "image": "/src/assets/images/Student27.jpg",
       "advisorId": 2,
-      "courses": ["Math","Geomancy"]
+      "courses": ["chemistry-physics","nuclear"]
     },
     {
       "id": 11,
       "studentID":"SE-011",
       "name": "Walter",
       "surname": "White",
-      "image": "/src/assets/images/Student11.jpg",
+      "image": "/src/assets/images/Student26.jpg",
       "advisorId": 5,
-      "courses": ["Math","Geomancy"]
+      "courses": ["chemistry","crystal meth"]
     },
     {
       "id": 12,
@@ -110,7 +110,7 @@
       "surname": "Pinkeman",
       "image": "/src/assets/images/Student12.jpg",
       "advisorId": 5,
-      "courses": ["Math","Geomancy"]
+      "courses": ["chemistry","crystal meth"]
     },
     {
       "id": 13,
@@ -119,7 +119,7 @@
       "surname": "Sillyfool",
       "image": "/src/assets/images/Student13.jpg",
       "advisorId": 5,
-      "courses": ["Math","Geomancy"]
+      "courses": ["dancing","Sexual Health Studies"]
     },
     {
       "id": 14,
@@ -128,7 +128,7 @@
       "surname": "Diesel",
       "image": "/src/assets/images/Student23.jpg",
       "advisorId": 2,
-      "courses": ["Math","Geomancy"]
+      "courses": ["Mechanical engineering","family"]
     },
     {
       "id": 15,
@@ -136,8 +136,8 @@
       "name": "Jesus",
       "surname": "Christ",
       "image": "/src/assets/images/Student17.jpg",
-      "advisorId": 5,
-      "courses": ["Math","Geomancy"]
+      "advisorId": 6,
+      "courses": ["Defense Against the Dark Arts","Buddhism"]
     },
     {
       "id": 16,
@@ -146,7 +146,7 @@
       "surname": "Kang",
       "image": "/src/assets/images/Student18.jpg",
       "advisorId": 5,
-      "courses": ["Math","Geomancy"]
+      "courses": ["chinese","Lady Gaga and the Sociology of Fame"]
     },
     {
       "id": 17,
@@ -154,8 +154,8 @@
       "name": "John",
       "surname": "Kratos",
       "image": "/src/assets/images/Student20.jpg",
-      "advisorId": 5,
-      "courses": ["Math","Geomancy"]
+      "advisorId": 6,
+      "courses": ["mythology","Geomancy"]
     },
     {
       "id": 18,
@@ -164,7 +164,7 @@
       "surname": "Hanji",
       "image": "/src/assets/images/Student21.jpg",
       "advisorId": 5,
-      "courses": ["Math","Geomancy"]
+      "courses": ["dancing","singing"]
     }
 
   ],
@@ -198,6 +198,12 @@
     "name":"Dreamy",
     "surname":"Bull",
     "image":"https://i1.sndcdn.com/artworks-CnVRs1wSaUG51r6t-hYuXBA-t500x500.jpg"
+  },
+  {
+    "id": 6,
+    "name":"Ne",
+    "surname":"Hofatura",
+    "image":"https://i.ytimg.com/vi/BduL0t1Eg1k/maxresdefault.jpg"
   }
 ]
 
