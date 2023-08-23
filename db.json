@@ -6,7 +6,7 @@
       "studentID": "SE-001",
       "name": "Yanwarut",
       "surname": "Suksawat",
-      "image": "./assets/images/Student1.JPG",
+      "image": "https://storage.cloud.google.com/se331-project/Student1.JPG",
       "advisorId": 3,
       "courses": ["Math","Ethnobotany"]
 
